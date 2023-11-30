@@ -2,7 +2,7 @@
 
 // actions
 const createActionName = actionName => `app/tables/${actionName}`;
-const UPDATE_TABLES = createActionName('UPDATE_BOOKS');
+const UPDATE_TABLES = createActionName('UPDATE_TABLES');
 
 // action creators
 const tablesReducer = (statePart = [], action) => {
