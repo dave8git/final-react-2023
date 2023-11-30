@@ -1,0 +1,12 @@
+{
+    "tables": [
+        {
+            "id": 1,
+            "table": "busy"
+        },
+        {
+            "id": 2,
+            "table": "busy"
+        }
+    ]
+}
