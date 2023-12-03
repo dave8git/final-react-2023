@@ -1,4 +1,9 @@
 //selectors
+export const getTableById = ({ tables }, tableId) => {
+    console.log('data from tablesRedux', tables, tableId);
+
+    // tables.find((table) => table.id === tableId)
+};
 
 // actions
 const createActionName = actionName => `app/tables/${actionName}`;
@@ -14,19 +19,19 @@ export const fetchTables = () => {
     }
 };
 
-//yt kodi: 17:54
-// export const addTableRequest = () => {
+
+// export const addTableRequest = (table) => {
 //     return (dispatch) => {
 //         const options = {
-//             method: 'POST',
+//             method: 'PATCH',
 //             headers: {
 //                 'Content-Type': 'application/json'
 //             }, 
-//             body: JSON.stringify(?),
+//             body: JSON.stringify(table),
 //         };
 
-//         fetch('http://localhost:3131/api/tables', options)
-//             .then(() => dispatch(addTable(???)))
+//         fetch('http://localhost:3131/api/tables/1', options)
+//             .then(() => dispatch(addTable(table)))
 //     }
 // }
 
@@ -34,6 +39,7 @@ const tablesReducer = (statePart = [], action) => {
     switch (action.type) {
         case UPDATE_TABLES:
             return [...action.payload];
+
         default:
             return statePart;
     };
