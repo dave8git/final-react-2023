@@ -1,9 +1,10 @@
 //selectors
-export const getTableById = ({ tables }, tableId) => {
-    console.log('data from tablesRedux', tables, tableId);
+export const getTableById = ( state , tableId) => {
 
-    // tables.find((table) => table.id === tableId)
+    console.log('state.tables', state.tables);
+    state.tables.find((table) => table.id == tableId);
 };
+
 
 // actions
 const createActionName = actionName => `app/tables/${actionName}`;

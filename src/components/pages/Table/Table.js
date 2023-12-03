@@ -9,7 +9,9 @@ const Table = props => {
    const { id } = useParams();
    const [table, setTable] = useState('');
    const tableData = useSelector((state) => {
-      getTableById(state, id);
+      console.log('state from Table', state);
+      console.log('id from Table', id);
+      getTableById(state, id );
    });
    console.log('id', id);
    console.log('tableData', tableData);
