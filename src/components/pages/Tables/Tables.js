@@ -6,6 +6,8 @@ import { fetchTables } from '../../../redux/tablesRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import MiniTable from '../../views/MiniTable/MiniTable';
+import NavbarC from '../../views/NavBarC/NavBarC';
+import Footer from '../../views/Footer/Footer';
 
 const Tables = props => {
    const dispatch = useDispatch();
@@ -16,11 +18,14 @@ const Tables = props => {
 
    return (
       <>
+         <NavbarC />
+         <h2>All tables</h2>
          <ListGroup as="ul">
             {tables.map((table) => <MiniTable {...table}></MiniTable>
             )}
             {/* {Teraz zbudować mały komponent który będzie wyświetlał info o każdym z postów tutaj w formie podsumowania i buttonem edycji dla każego (tak jak MiniPost w aplikacji CRUD)} */}
          </ListGroup>
+         <Footer />
       </>
 
 
